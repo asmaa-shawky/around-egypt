@@ -1,0 +1,483 @@
+body{
+  background-color: whitesmoke;
+  color:  black;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Arabic{
+  font-family: 'Amiri', serif;
+}
+
+/* nav bar*/
+#navbar {
+  background-color:  whitesmoke; opacity:0.5;;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  transition: top 0.3s;
+  z-index: 9999;
+}
+.navbar{
+  background-color: rgb(168, 66, 18);
+}
+.nav-link{
+  color: black !important;
+}
+nav .navbar-nav li a{
+  position: relative;
+}
+nav .navbar-nav li a::after{
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 0;
+  height: 1px;
+  background-color: #fa5543;
+  top: 100%;
+  transition: all 0.5s;
+}
+
+nav .navbar-nav li a:hover::after{
+  width: 2.5rem;
+}
+.main{
+  position: relative;
+  height: 100vh;
+  background:  url(../images/iStock-598160632.jpg) no-repeat center;
+  background-size: cover;
+}
+.main-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.275);
+}
+.main .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.main .main-title{
+  font-family: 'Playfair Display';
+  font-size: 70px;
+  color: #fff;
+}
+.main .sub-tittle{
+  font-size: 20px;
+  color: #fff;
+  margin: 30px 0px;
+}
+/* ages */
+.ages-eg{
+  position: relative;
+  margin: auto;
+  width: 75%; 
+}
+.ages-eg .ages{
+  height: 340px;
+  text-align: center;
+}
+.ages-eg .ages .ages-title{
+  padding-top: 60px;
+  color: #fff;
+  font-size: 30px;
+  
+}
+.ages-eg .ages-container{
+  padding-top: 16px;
+  overflow: auto;
+}
+.ages-eg .ages-container .ages-card{
+  background-color: #8a5a44;
+  padding: 40px 24px 32px 24px;
+  width: 250px;
+  height: 200px;
+  float: left;
+  margin-left: 4.5%;
+  text-align: left;
+  position: relative;
+}
+.ages-eg .ages-container .first{
+  margin-left: 100px;
+}
+.ages-card-title{
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: white;
+  text-align: center;
+
+}
+.ages-card-description{
+  font-size: 13px;
+  text-align: right;
+  color: #F5F5F5;
+}
+.ages-card a{
+  padding-top: 10px;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+.ages-card a:hover{
+  text-decoration: underline;
+}
+.ages-card-title , .ages-card a , .ages-card-description{
+  position: relative;
+  z-index: 4;
+}
+.ages-card:after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: #d5bdaf;
+  opacity: 0;
+  z-index: 1;
+}
+.ages-card:hover::after{
+  width:100%;
+  height: 100%;
+  transition: .8s ;
+  opacity: 2;
+}
+.ages-card-title , .ages-card a , .offer-div .offer-sub-title , .offer-div .offer-sub-title i , .offer-div .offer-desc{
+  position: relative;
+  z-index: 4;
+}
+h1 { 
+  position: relative;
+  text-align: center
+}
+
+h1:before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 130px;
+  height: 2px;
+  background: #8a5a44;
+  transform:translateX(-65px) 
+}
+/*** where to go***/
+.column {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.column:hover .image {
+  opacity: 0.3;
+}
+
+.column:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: #8a5a44;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  text-align: center;}
+/** things to do***/
+.clear 
+{
+    clear: both;
+}
+#thingstodo
+{
+    text-align: center;
+    margin: 300px;
+    margin-top: auto;
+    margin-bottom: 100px;
+}
+.col
+{
+   
+    height: 320px;
+    float: left;
+    text-align:center;
+    color: #DBDBDB;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 50px; 
+     transition: transform .2s; 
+}
+.col img
+{
+    width: 190px;
+height: 270px;
+ border: 1px solid #DBDBDB;
+ border-radius: 6px;
+}
+.col p{color: #686565}
+.col .fa{color: #E84040}
+
+.col h4
+{padding: 10px 0  0;
+  font-size: 20px;
+   color: #565353;
+  }
+  .col:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+  .todo .col .Large{
+    font-size: 14.5px;
+    line-height: 40px;
+  }
+  .todo .col:after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .todo .col:hover::after{
+    width: 100%;
+    height: 95%;
+    opacity: 0.3;
+    transition:1s;
+    -webkit-transition:1s;
+    -moz-transition:1s;
+    -ms-transition:1s;
+    -o-transition:1s;
+  }
+  .quote{
+    height: 200px;
+    background:url('..//images/quote.jpeg') no-repeat;
+    background-size: cover;
+    color: white;
+    text-align:center;
+    margin:0;}
+    /* king */
+.king-container{
+  width: 80%;
+  margin: auto;
+}
+.king-container .title{
+  text-align: center;
+  padding-bottom: 40px;
+}
+.king-container .king-img img{
+  width: 190px;
+  border-radius: 16px;
+}
+.king-item {
+  float: left;
+  background-color: whitesmoke;
+  width: 28%;
+  padding: 25px  16px;
+  text-align: center;
+  position: relative;
+  border-radius: 16px;
+}
+.mg {
+  margin: 0px  3%;
+}
+.king-img {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.king-img  img {
+  width: 100%;
+}
+.king-overlay {
+  position: absolute;
+   top: 0; 
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.249) ;
+  border-radius: 16px;
+  opacity: 0 ;
+}
+.king-item:hover  .king-overlay {
+  opacity: 0.5 ;
+}
+.king-overlay i {
+  display: block;
+  line-height: 40px  ;
+}
+.king-overlay  a {
+  display: block;
+  width:40px;
+  height: 40px;
+  background-color: #fff;
+  color: #8a5a44;
+  margin-left: auto ;
+}
+.king-overlay .face{
+  border-radius: 0px 16px 0px 0px;
+}
+.king-info-title {
+  padding-top: 15px;
+  text-transform: capitalize;
+  color: #8a5a44;
+  font-size: 20px;
+}
+.king-info-sp {
+  text-transform: capitalize ;   
+  color: #8a5a44;
+}
+.king-item:after {
+   content: "";
+   position: absolute;
+   width:0 ;
+   height: 0  ;
+   top : 0 ;
+   left : 0 ;
+   background-color: rgba(0, 0, 0, 0.305);
+   opacity: 0 ;
+   border-radius: 16px;
+}
+.king-item:hover::after {
+  width:100%;
+  height: 100%;
+  transition: .7s ;
+  opacity:0.6;
+}
+/* recent */
+.recent{
+  position: relative;
+  height: 120vh;
+}
+.recent .title{
+  text-align: center;
+  font-size: 14px;
+
+}
+.recent .container{
+  position: relative;
+ 
+  margin: auto;
+}
+.recent .recent-card{
+  float: left;
+  width: 25%;
+  padding: 25px  16px;
+  position: relative;
+  background-color: #F5F5F5;
+  
+}
+.recent .recent-card img{
+  width: 260px;
+ 
+}
+.recent-card .icons a{
+  color: #8a5a44;
+  font-size: 10px;
+}
+.recent-card .icons a i{
+  padding-right: 5px;
+}
+.recent-card .icons{
+  padding-top: 10px;
+}
+.recent-card .icons .sec-icon{
+  padding: 0px 10px;
+  text-align: right;
+}
+.recent-card .recent-card-title{
+  color: #8a5a44;
+  padding: 10px 0px;
+  text-align: right;
+}
+.recent-card p{
+  padding: 10px 0px 20px 0px;
+  text-align: right;
+}
+.recent-card .recent-link{
+  color: #8a5a44;
+  text-align: right;
+}
+.recent-card .recent-link:hover{
+  text-decoration: underline;
+}
+.recent .title, .recent img , .recent .icons , .recent .recent-card-title , .recent p , .recent .recent-link{
+  position: relative;
+  z-index: 4;
+}
+.recent-card:after{
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #d5bdaf;
+  position: absolute;
+  z-index: 1;
+}
+.recent-card:hover::after{
+  height: 100%;
+  transition: .8s;
+}
+/* footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #8a5a44;
+  color: white;
+  text-align: center;
+}
+.footer .footer-icons{
+  padding: 30px 0px;
+}
+.footer .footer-icons a{
+  display: inline-block;
+  background-color: #F5F5F5;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
